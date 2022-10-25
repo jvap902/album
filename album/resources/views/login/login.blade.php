@@ -21,24 +21,14 @@
         ])
 
         @include('components.field', [
-            'type' => 'text',
-            'id' => 'username',
-            'name' => 'username',
+            'type' => 'email',
+            'id' => 'email',
+            'name' => 'email',
             'label' => '',
             'class' => 'form-control',
-            'placeholder' => 'Usuário',
+            'placeholder' => 'E-mail',
             'value' => '',
         ])
-
-@include('components.field', [
-    'type' => 'email',
-    'id' => 'email',
-    'name' => 'email',
-    'label' => '',
-    'class' => 'form-control',
-    'placeholder' => 'E-mail',
-    'value' => '',
-])
 
         @include('components.field', [
             'type' => 'password',
@@ -50,7 +40,7 @@
             'value' => '',
         ])
 
-        @include('components.button', ['type' => 'submit', 'id' => 'btn', 'color' => 'btn btn-outline-dark', 'text' => 'Conectar-se'])
+        @include('components.button', ['type' => 'submit', 'id' => 'btn', 'class' => 'btn btn-outline-dark', 'text' => 'Conectar-se'])
 
     </form>
 @endsection
