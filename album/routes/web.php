@@ -20,13 +20,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::get('/figurinha/create', [FigurinhaController::class, 'create'])->name('createFigurinha');
-Route::post('/figurinha/store', [FigurinhaController::class, 'store'])->name('storeFigurinha');
-
-Route::match(['get', 'post'],'/login', [ UsuariosController::class, 'login'])->name('Login');
+Route::get('/login', [UsuariosController::class, 'login'])->name("login");
+Route::post('/login', [UsuariosController::class, 'login'])->name("login");
 Route::get('/getlogin/', function(){
     $login = Usuario::all();
     echo json_encode($login);
 });
+
+Route::get('/figurinha/create', [FigurinhaController::class, 'create'])->name('createFigurinha');
+Route::post('/figurinha/store', [FigurinhaController::class, 'store'])->name('storeFigurinha');
 
