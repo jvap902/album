@@ -16,12 +16,12 @@ use App\Http\Controllers\UsuariosController;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 
 Route::get('/login', [UsuariosController::class, 'login'])->name("login");
 Route::post('/login', [UsuariosController::class, 'login'])->name("login");
-Route::get('/getlogin/', function () {
+Route::get('/getlogin/', function(){
     $login = Usuario::all();
     echo json_encode($login);
 });
