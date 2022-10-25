@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FigurinhaController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Usuario;
 use App\Http\Controllers\UsuariosController;
@@ -25,3 +26,7 @@ Route::get('/getlogin/', function(){
     $login = Usuario::all();
     echo json_encode($login);
 });
+
+Route::get('/figurinha/create', [FigurinhaController::class, 'create'])->name('createFigurinha');
+Route::post('/figurinha/store', [FigurinhaController::class, 'store'])->name('storeFigurinha');
+

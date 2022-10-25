@@ -10,11 +10,11 @@ class Sticker extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name',
-        'index',
-        '',
+        'id',
+        'nome',
+        'dtnasc',
+        'naturalidade',
+        'file_path',
+        'numero'
     ];
 }
-
-
-//Figurinhas::crate(['name' => 'João', 'index' => 15])
