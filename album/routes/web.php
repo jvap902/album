@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Usuario;
+use App\Http\Controllers\UsuariosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +17,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/login', [UsuariosController::class, 'login'])->name("login");
+Route::post('/login', [UsuariosController::class, 'login'])->name("login");
+Route::get('/getlogin/', function(){
+    $login = Usuario::all();
+    echo json_encode($login);
 });
