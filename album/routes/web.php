@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FigurinhaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/figurinha/create', [FigurinhaController::class, 'create'])->name('createFigurinha');
+Route::post('/figurinha/store', [FigurinhaController::class, 'store'])->name('storeFigurinha');
