@@ -24,24 +24,26 @@ class FigurinhaController extends Controller
     {
         $data = $request->all();
         unset($data['_token']);
-
-            if ($request->hasFile('file')) {
-
+        if ($request->hasFile('file')) {
                 $request->validate([
                     'image' => 'mimes:jpeg,bmp,png' 
                 ]);
-                $path = $request->file->store('storage/figurinha');
-    
-                // Store the record, using the new file hashname which will be it's new filename identity.
+
+                $request->file->store('public');
+
                 $figurinha = new Figurinha([
                     "nome" => $request->get('nome'),
                     "dtnasc" => $request->get('dtnasc'),
                     "naturalidade" => $request->get('naturalidade'),
                     "file_path" => $request->file->hashName()
                 ]);
-                dd( $figurinha);
-                $figurinha->save(); // Finally, save the record.
+                $figurinha->save();
             }
-           
+            // fazer try catch 
+            return view('figurinha.teste');
+    }
+
+    function edit(){
+        return view('figurinha.edit');
     }
 }

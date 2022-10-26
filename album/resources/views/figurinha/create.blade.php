@@ -9,7 +9,7 @@
 
 <body>
     <div class="container">
-        <form action="{{ route('storeFigurinha') }}" method="post">
+        <form action="{{ route('storeFigurinha') }}" method="post" enctype="multipart/form-data">
 
             @csrf
 
