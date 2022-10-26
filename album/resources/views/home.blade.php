@@ -51,7 +51,7 @@
                 </div>
             </div>
             <div name="figurinhas">
-                <form action='{{ route('login') }}' method='POST'>
+                <form action="{{ route('login') }}" method='POST'>
                     @csrf
 
                     <a href="{{ route('createFigurinha') }}" class="btn">Ganhar Figurinha</a>
