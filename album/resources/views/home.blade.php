@@ -1,10 +1,17 @@
-@extends ('base.index')
+
+@extends("base.index")
 @section('container')
-<form action='{{route("login")}}' method='POST'>
-    @csrf
+<div>
+    <div class="div_album">
+        <div calss="figurinha">
+            <a>brgeiubrgeourgtbeorgueboerguibgeioueb</a>
+        </div>
+    </div>
+    <div name="figurinhas">
+        <form action='{{route("login")}}' method='POST'>
+            @csrf
 
-    @include('components.button', ['type' => 'submit', 'id' => 'btn', 'class' => 'btn btn-outline-dark', 'text' => 'Ganhar Pacote hehe'])
-
-</form>
-
-@endsection
+            <a href="{{ route('createFigurinha') }}" class="btn">Ganhar Figurinha</a>
+        </form>
+    </div>
+</div>
