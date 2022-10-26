@@ -10,38 +10,31 @@
     <form action='{{route("login")}}' method='POST'>
         @csrf
 
-        @include('components.field', [
-            'type' => 'hidden',
-            'id' => 'id',
-            'name' => 'id',
-            'label' => '',
-            'class' => '',
-            'placeholder' => '',
-            'value' => '',
-        ])
 
-        @include('components.field', [
-            'type' => 'email',
-            'id' => 'email',
-            'name' => 'email',
-            'label' => '',
-            'class' => 'form-control',
-            'placeholder' => 'E-mail',
-            'value' => '',
-        ])
+        <div id="divnovaconta">
+            <div class="forms_log">
+                <div class="form-group row">
+            <div class="d-flex align-items-center justify-content-center">
+                <div class="d-flex flex-column my-5">
+                    <div class="my-5">
+                    <h1>Album de figurihas</h1>
+                    <h4>3º info 2022</h4>
 
-        @include('components.field', [
-            'type' => 'password',
-            'id' => 'password',
-            'name' => 'password',
-            'label' => '',
-            'class' => 'form-control',
-            'placeholder' => 'Senha',
-            'value' => '',
-        ])
+            <div class="my-4">
+                    <div class="form-floating mb-3">
+                <input type="email" name="password" class="form-control" id="email" placeholder="nome@exemplo.com" value="">
+                <label for="floatingInput">E-mail</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" name="password" class="form-control" id="password" placeholder="Senha" value="">
+                <label for="password">Senha</label>
+            </div>
 
-        @include('components.button', ['type' => 'submit', 'id' => 'btn', 'class' => 'btn btn-outline-dark', 'text' => 'Conectar-se'])
+            <div class="d-grid gap-2 col-8 mx-auto">
+            @include('components.button', ['type' => 'submit', 'id' => 'btn', 'color' => 'btn btn-outline-dark  my-3', 'text' => 'Conectar-se'])
+            </div>
 
-    </form>
-@endsection
-</div>
+            <p class="mt-3 text-center">Ainda não possui uma conta? <a class="bnt-link-primary text-decoration-none" style="color: #74b06d" href="/novaconta" title=""><b>Criar conta</b></a></p>
+        </form>
+        </div>
+
