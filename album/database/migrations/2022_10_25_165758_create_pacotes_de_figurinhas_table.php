@@ -17,7 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('usuario_id');
             $table->foreign('usuario_id')->references('id')->on('usuarios');
-            $table->date('data');
+            $table->date('dt_criacao');
+            $table->date('dt_abertura');
         });
     }
 

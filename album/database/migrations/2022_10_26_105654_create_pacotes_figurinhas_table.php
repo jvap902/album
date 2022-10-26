@@ -13,11 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('figurinhas', function (Blueprint $table) {
+        Schema::create('pacotes_figurinhas', function (Blueprint $table) {
             $table->id();
-            $table->date('dtnasc');
-            $table->string('naturalidade');
-            $table->string('file_path');
+            $table->integer('usuario_id');
+            $table->integer('figurinhas_id');
+            $table->date('dt_adicionada');
+            $table->foreign('usuario_id')->references('id')->on('usuarios');
+            $table->foreign('figurinha_id')->references('id')->on('figurinhas');
         });
     }
 
@@ -28,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('figurinhas');
+        Schema::dropIfExists('pacotes_figurinhas');
     }
 };
