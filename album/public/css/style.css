@@ -52,3 +52,24 @@
 body {
     background-color: #8EB5F0;
 }
+
+#divlogin {
+    margin-top: 6%;
+    float: left;
+    margin-left: 15%;
+}
+
+.imgforms {
+    float: right;
+    margin-top: 2.5%;
+    margin-right: 15%;
+}
+
+h1 {
+    color: #003366;
+}
+
+h4 {
+    text-align: center;
+    color: #003366;
+}
