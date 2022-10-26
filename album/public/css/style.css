@@ -1,8 +1,38 @@
+/* página home */
+.foto {
+    height: 6rem;
+    width: 10rem;
+}
+
+.nome{
+    font-weight: bold;
+    text-align: center;
+}
+
+.figurinha {
+    background-color: white;
+}
+
 .div_album {
+    background-color: aqua;
+    position: absolute;
+    height: 50rem;
+    width: 95rem;
+
+}
+
+.card {
+    padding: 1rem;
+    width: 14rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 2rem;
+}
+
+.div {
     margin-top: 2rem;
     margin-left: 1rem;
     padding: 0.5rem;
-    background-color: black;
 }
 
 /* CSS PARTE DA JÚLIA*/
