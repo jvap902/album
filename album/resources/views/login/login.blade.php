@@ -10,18 +10,19 @@
     <form action='{{route("login")}}' method='POST'>
         @csrf
 
+        <img src="img/imglogin.png" class="imgforms" class="rounded float-start" width="700" height="700" alt="Computador">
 
-        <div id="divnovaconta">
+        <div id="divlogin">
             <div class="forms_log">
                 <div class="form-group row">
             <div class="d-flex align-items-center justify-content-center">
                 <div class="d-flex flex-column my-5">
                     <div class="my-5">
-                    <h1>Album de figurihas</h1>
+                    <h1>Álbum de figurihas</h1>
                     <h4>3º info 2022</h4>
 
-            <div class="my-4">
-                    <div class="form-floating mb-3">
+            <div class="my-3">
+                    <div class="form-floating mb-3 my-5">
                 <input type="email" name="password" class="form-control" id="email" placeholder="nome@exemplo.com" value="">
                 <label for="floatingInput">E-mail</label>
             </div>
@@ -31,10 +32,10 @@
             </div>
 
             <div class="d-grid gap-2 col-8 mx-auto">
-            @include('components.button', ['type' => 'submit', 'id' => 'btn', 'color' => 'btn btn-outline-dark  my-3', 'text' => 'Conectar-se'])
+                <button type="button" id="btnlogin" class="btn btn my-3" style="background-color: #01497C; color:aliceblue">Conectar-se</button>
             </div>
 
-            <p class="mt-3 text-center">Ainda não possui uma conta? <a class="bnt-link-primary text-decoration-none" style="color: #74b06d" href="/novaconta" title=""><b>Criar conta</b></a></p>
         </form>
         </div>
+    </div>
 
