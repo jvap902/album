@@ -18,6 +18,8 @@ return new class extends Migration
             $table->date('dtnasc');
             $table->string('naturalidade');
             $table->string('file_path');
+            $table->string('numero');
+            $table->string('nome');
         });
     }
 
