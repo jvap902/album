@@ -22,10 +22,10 @@ class UsuariosController extends Controller
             if (Auth::attempt($credenciais)) {
                 session()->regenerate();
                 $form->session()->put('usuario', $credenciais['email']);
-                return redirect('...');
+                return redirect()->route('home');
             } else {
                 // Login deu errado (usuário ou senha inválidos)
-                return redirect()->route('login')->with(
+                return redirect()->route('login.login')->with(
                     'erro',
                     'Email ou senha inválidos.'
                 );

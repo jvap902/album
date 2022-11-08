@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('usuarios_figurinhas', function (Blueprint $table) {
             $table->id();
-            $table->string('usuario_id');
-            $table->string('figurinhas_id');
+            $table->unsignedBigInteger('usuario_id');
+            $table->unsignedBigInteger('figurinhas_id');
             $table->foreign('usuario_id')->references('id')->on('usuarios');
             $table->foreign('figurinhas_id')->references('id')->on('figurinhas');
         });

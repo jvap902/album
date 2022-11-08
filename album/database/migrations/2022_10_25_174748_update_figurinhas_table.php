@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::table('figurinhas', function (Blueprint $table) {
             $table->string('nome');
+            $table->integer('numero');
     });
     }
 

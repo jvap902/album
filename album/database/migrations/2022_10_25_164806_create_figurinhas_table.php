@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('figurinhas', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->date('dtnasc');
             $table->string('naturalidade');
             $table->string('file_path');
