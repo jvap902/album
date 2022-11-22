@@ -22,27 +22,35 @@
 }
 
 .div_album {
-    background-color: #999de0;
-    position: absolute;
-    height: 50rem;
-    width: 95rem;
+    background-color: #75594333;
+    position: relative;
+    height: 58.5rem;
+    width: 97rem;
     border-radius: 7px;
+    border-width: 1px;
+    border-color: black;
+    border: solid;
 
 }
 
 .card {
     /* padding: 1rem; */
-    height: 21rem;
-    width: 14rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-top: 2rem;
-    border-color: #e5b8a9;
-    border-width: 1rem;
+    height: 15.7rem;
+    width: 10.5rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    margin-top: 1rem;
+    border-color: #000000;
+    border-width: 0.5rem;
+}
+
+.figurinhas_sweep {
+    height: 15.7rem;
+    width: 10.5rem;
 }
 
 .div {
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-left: 1rem;
     padding: 0.5rem;
 }
@@ -50,7 +58,7 @@
 /* CSS PARTE DA JÚLIA*/
 
 body {
-    background-color: #93CAF6;
+    background-color: #93caf6;
 }
 
 #divlogin {
@@ -72,4 +80,8 @@ h1 {
 h4 {
     text-align: center;
     color: #003366;
+}
+
+#div_criarfig {
+    background-color: transparent;
 }
