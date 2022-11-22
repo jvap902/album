@@ -57,5 +57,4 @@
                     <a href="{{ route('createFigurinha') }}" class="btn">Ganhar Figurinha</a>
                 </form>
             </div>
-
         </div>
