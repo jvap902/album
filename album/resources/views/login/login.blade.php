@@ -32,7 +32,7 @@
             </div>
 
             <div class="d-grid gap-2 col-8 mx-auto">
-                <button type="button" id="btnlogin" class="btn btn my-3" style="background-color: #01497C; color:aliceblue">Conectar-se</button>
+                <button type="button" id="btnlogin" class="btn btn8 my-3" style="background-color: #01497C; color:aliceblue">Conectar-se</button>
             </div>
 
         </form>

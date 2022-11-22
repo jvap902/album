@@ -1,3 +1,5 @@
+@extends ('base.index')
+
 <!DOCTYPE html>
 
 <head>
@@ -16,20 +18,38 @@
 
             @csrf
 
-            <label>Nome</label>
-            <input type="text" class="form-control" name="nome" required>
-            <label>Data de nascimento</label>
-            <input type="date" class="form-control" name="dtnasc" required>
-            <label>Naturalidade</label>
-            <input type="text" class="form-control" name="naturalidade" required>
-            <label>Número</label>
-            <input type="number" class="form-control" name="numero" required>
-            <label>Foto</label>
-            <input type="file" name="file" required>
+            <div id="div_criarfig">
 
-            <br><button type="submit">Criar figurinha</button>
+            <div class="form-floating mb-3 my-5">
+                <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome" value="" required>
+                <label for="floatingInput">Nome do jogador</label>
+            </div>
+
+            <div class="form-floating mb-3 my-5">
+                <input type="date" name="dtnasc" class="form-control" id="dtnasc" placeholder="dtnasc" value="" required>
+                <label for="floatingInput">Data de nascimento</label>
+            </div>
+
+            <div class="form-floating mb-3 my-5">
+                <input type="text" name="naturalidade" class="form-control" id="naturalidade" placeholder="naturalidade" value="" required>
+                <label for="floatingInput">Naturalidade</label>
+            </div>
+
+            <div class="form-floating mb-3 my-5">
+                <input type="number" name="numero" class="form-control" id="numero" placeholder="numero" value="" required>
+                <label for="floatingInput">Número</label>
+            </div>
+
+            <div>
+                <input class="form-control form-control-lg my-5" id="formFileLg" type="file">
+              </div>
+
+            <div class="d-grid gap-2 col-8 mx-auto">
+                <button type="submit" id="criarfig" class="btn btn8 my-4" style="background-color: #01497C; color:aliceblue">Criar figurinha</button>
+            </div>
         </form>
     </div>
+</div>
 
 </body>
 
