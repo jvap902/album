@@ -32,7 +32,7 @@ class FigurinhaController extends Controller
                         'image' => 'mimes:jpeg,bmp,png' 
                     ]);
     
-                    $request->file->store('public');
+                    $request->file->store('');
     
                     $figurinha = new Figurinha([
                         "nome" => $request->get('nome'),
@@ -43,7 +43,7 @@ class FigurinhaController extends Controller
                     ]);
                     $figurinha->save();
                 }
-                return view('figurinha.teste');
+                return redirect('/');
         }catch(Exception $e){
             return view('figurinha.create', ['erro' => $e]);
         }
