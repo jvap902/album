@@ -32,7 +32,7 @@ class UsuariosController extends Controller
             }
         }
 
-        return view("login/login");
+        return view("login.login");
     }
 
 }

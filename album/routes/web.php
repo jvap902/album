@@ -18,16 +18,16 @@ use App\Http\Controllers\UsuariosController;
 
 Route::get('/', function () {
     return view('home');
-});
+})->middleware('auth');
 Route::match(['get', 'post'],'/login', [ UsuariosController::class, 'login'])->name('login');
 Route::get('/getlogin/', function(){
     $login = Usuario::all();
     echo json_encode($login);
 });
 
-Route::get('/figurinha/create', [FigurinhaController::class, 'create'])->name('createFigurinha');
-Route::post('/figurinha/store', [FigurinhaController::class, 'store'])->name('storeFigurinha');
+Route::get('/figurinha/create', [FigurinhaController::class, 'create'])->name('createFigurinha')->middleware('auth');
+Route::post('/figurinha/store', [FigurinhaController::class, 'store'])->name('storeFigurinha')->middleware('auth');
 
 
 
-Route::get('/pacote/create', [FigurinhaController::class, 'create'])->name('createPacoteFigurinha');
+Route::get('/pacote/create', [FigurinhaController::class, 'create'])->name('createPacoteFigurinha')->middleware('auth');
