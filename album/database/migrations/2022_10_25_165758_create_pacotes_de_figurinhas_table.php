@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('pacotes', function (Blueprint $table) {
             $table->id();
-            $table->string('usuario_id');
-            $table->foreign('usuario_id')->references('id')->on('usuarios');
+            $table->unsignedBigInteger('usuario_id');
             $table->date('dt_criacao');
             $table->date('dt_abertura');
+            $table->foreign('usuario_id')->references('id')->on('usuarios');
         });
     }
 

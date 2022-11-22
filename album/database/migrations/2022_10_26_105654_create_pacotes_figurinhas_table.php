@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('pacotes_figurinhas', function (Blueprint $table) {
             $table->id();
-            $table->integer('usuario_id');
-            $table->integer('figurinhas_id');
+            $table->unsignedBigInteger('usuario_id');
+            $table->unsignedBigInteger('figurinha_id');
             $table->date('dt_adicionada');
             $table->foreign('usuario_id')->references('id')->on('usuarios');
             $table->foreign('figurinha_id')->references('id')->on('figurinhas');

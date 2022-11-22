@@ -9,24 +9,36 @@
     text-align: center;
 }
 
+.naturalidade {
+    text-align: center;
+}
+
+.dtnasc {
+    text-align: center;
+}
+
 .figurinha {
     background-color: white;
 }
 
 .div_album {
-    background-color: aqua;
+    background-color: #999de0;
     position: absolute;
     height: 50rem;
     width: 95rem;
+    border-radius: 7px;
 
 }
 
 .card {
-    padding: 1rem;
+    /* padding: 1rem; */
+    height: 21rem;
     width: 14rem;
     margin-left: 1rem;
     margin-right: 1rem;
     margin-top: 2rem;
+    border-color: #e5b8a9;
+    border-width: 1rem;
 }
 
 .div {
@@ -38,5 +50,26 @@
 /* CSS PARTE DA JÚLIA*/
 
 body {
-    background-color: #A9D6E5;
+    background-color: #93CAF6;
+}
+
+#divlogin {
+    margin-top: 6%;
+    float: left;
+    margin-left: 15%;
+}
+
+.imgforms {
+    float: right;
+    margin-top: 2.5%;
+    margin-right: 15%;
+}
+
+h1 {
+    color: #003366;
+}
+
+h4 {
+    text-align: center;
+    color: #003366;
 }

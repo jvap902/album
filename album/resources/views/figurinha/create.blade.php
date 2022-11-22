@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<head>]
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Criar figurinha</title>
@@ -9,7 +9,10 @@
 
 <body>
     <div class="container">
-        <form action="{{ route('storeFigurinha') }}" method="post">
+        @if(isset($erro))
+        <a>{{$erro}}</a>
+        @endif
+        <form action="{{ route('storeFigurinha') }}" method="post" enctype="multipart/form-data">
 
             @csrf
 
@@ -19,6 +22,8 @@
             <input type="date" class="form-control" name="dtnasc" required>
             <label>Naturalidade</label>
             <input type="text" class="form-control" name="naturalidade" required>
+            <label>Número</label>
+            <input type="number" class="form-control" name="numero" required>
             <label>Foto</label>
             <input type="file" name="file" required>
 
