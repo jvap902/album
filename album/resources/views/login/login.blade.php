@@ -20,7 +20,7 @@
                     <div class="d-flex align-items-center justify-content-center">
                         <div class="d-flex flex-column my-5">
                             <div class="my-5">
-                                <h1>Álbum de figurihas</h1>
+                                <h1>Álbum de figurinhas</h1>
                                 <h4>3º info 2022</h4>
 
                                 <div class="my-3">
