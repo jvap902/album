@@ -24,14 +24,18 @@
 .div_album {
     background-color: #75594333;
     position: relative;
-    height: 58.5rem;
+    height: fit-content;
     width: 97rem;
     border-radius: 7px;
     border-width: 1px;
     border-color: black;
     border: solid;
     float: left;
+    padding-bottom: 1rem;
+}
 
+.nav {
+    float: right;
 }
 
 .card {
@@ -45,17 +49,25 @@
     border-width: 0.5rem;
 }
 
-.figurinhas_sweep {
+.figurinhas_sweep .repetidas{
     height: 15.7rem;
     width: 10.5rem;
-    position: fixed;
+    position: relative;
     margin: auto;
 }
 
 .outros {
-    float: left;
-    width: 20rem;
+    float: right;
+    width: 19.5rem;
     height: 58.5rem;
+}
+
+.pacote{
+    margin: auto;
+}
+
+.pacotes_figurinhas {
+    width: 19.5rem;
 }
 
 .div {
