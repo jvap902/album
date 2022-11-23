@@ -38,12 +38,6 @@ Route::post('/figurinha/store', [FigurinhaController::class, 'store'])->name('st
 
 Route::get('/pacote/create', [FigurinhaController::class, 'create'])->name('createPacoteFigurinha')->middleware('autenticacao');
 
-Route::get('/figurinha/create', [FigurinhaController::class, 'create'])->name('createFigurinha');
-Route::post('/figurinha/store', [FigurinhaController::class, 'store'])->name('storeFigurinha');
-
-
-
-
 
 Route::get('/listagem', [ ListagemController::class, 'listar'])->name('listagem');
 
