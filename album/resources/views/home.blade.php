@@ -39,7 +39,8 @@
                                 <p class="dtnasc" class="card-text">01/12/1760</p>
                             </div>
                         </div>
-                    </div><div class="col">
+                    </div>
+                    <div class="col">
                         <div class="card">
                             <img class="card-img-top"
                                 src="https://3.bp.blogspot.com/-NVioUWGvVtc/XJK6qs_p1AI/AAAAAAAAAI0/Sc8UzAT-iuM91qVd5EfqLFp5hjagDLD0ACLcBGAs/s640/download.jpg"
@@ -50,7 +51,8 @@
                                 <p class="dtnasc" class="card-text">01/12/1760</p>
                             </div>
                         </div>
-                    </div><div class="col">
+                    </div>
+                    <div class="col">
                         <div class="card">
                             <img class="card-img-top"
                                 src="https://3.bp.blogspot.com/-NVioUWGvVtc/XJK6qs_p1AI/AAAAAAAAAI0/Sc8UzAT-iuM91qVd5EfqLFp5hjagDLD0ACLcBGAs/s640/download.jpg"
@@ -61,7 +63,8 @@
                                 <p class="dtnasc" class="card-text">01/12/1760</p>
                             </div>
                         </div>
-                    </div><div class="col">
+                    </div>
+                    <div class="col">
                         <div class="card">
                             <img class="card-img-top"
                                 src="https://3.bp.blogspot.com/-NVioUWGvVtc/XJK6qs_p1AI/AAAAAAAAAI0/Sc8UzAT-iuM91qVd5EfqLFp5hjagDLD0ACLcBGAs/s640/download.jpg"
@@ -99,16 +102,18 @@
                     </div>
                 </div>
             </div>
-            <div class="figurinhas_sweep">
-                <div class="card">
+            <div class="outros">
+                <div class="figurinhas_sweep">
+                    <div class="card">
 
+                    </div>
                 </div>
-            </div>
-            <div name="figurinhas">
-                <form action="{{ route('login') }}" method='POST'>
-                    @csrf
+                <div name="figurinhas">
+                    <form action="{{ route('login') }}" method='POST'>
+                        @csrf
 
-                    <a href="{{ route('createFigurinha') }}" class="btn">Ganhar Figurinha</a>
-                </form>
+                        <a href="{{ route('createFigurinha') }}" class="btn">Ganhar Figurinha</a>
+                    </form>
+                </div>
             </div>
         </div>

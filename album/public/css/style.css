@@ -30,6 +30,7 @@
     border-width: 1px;
     border-color: black;
     border: solid;
+    float: left;
 
 }
 
@@ -47,6 +48,14 @@
 .figurinhas_sweep {
     height: 15.7rem;
     width: 10.5rem;
+    position: fixed;
+    margin: auto;
+}
+
+.outros {
+    float: left;
+    width: 20rem;
+    height: 58.5rem;
 }
 
 .div {
