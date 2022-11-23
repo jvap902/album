@@ -30,7 +30,6 @@ Route::post('/login', [UsuariosController::class, 'login'])->name('logar');
 
 // ->middleware('auth')
 
-<<<<<<< HEAD
 
 Route::get('/figurinha/create', [FigurinhaController::class, 'create'])->name('createFigurinha')->middleware('autenticacao');
 Route::post('/figurinha/store', [FigurinhaController::class, 'store'])->name('storeFigurinha')->middleware('autenticacao');
@@ -38,14 +37,8 @@ Route::post('/figurinha/store', [FigurinhaController::class, 'store'])->name('st
 
 
 Route::get('/pacote/create', [FigurinhaController::class, 'create'])->name('createPacoteFigurinha')->middleware('autenticacao');
-=======
-Route::get('/figurinha/create', [FigurinhaController::class, 'create'])->name('createFigurinha');
-Route::post('/figurinha/store', [FigurinhaController::class, 'store'])->name('storeFigurinha');
 
-
-
-Route::get('/pacote/create', [FigurinhaController::class, 'create'])->name('createPacoteFigurinha')->middleware('auth');
 
 
 Route::get('/listagem', [ ListagemController::class, 'listar'])->name('listagem');
->>>>>>> cee48d74d55d48a17b2087a0a5940acc40920268
+
