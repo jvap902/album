@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\FigurinhaController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Usuario;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\PacoteController;
+use App\Http\Controllers\ListagemController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,9 +18,7 @@ use App\Http\Controllers\PacoteController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [ AlbumController::class, 'home']);
 
 Route::get('/login', [ UsuariosController::class, 'login'])->name('login');
 Route::post('/login', [UsuariosController::class, 'login'])->name('logar');
@@ -28,11 +28,22 @@ Route::post('/login', [UsuariosController::class, 'login'])->name('logar');
 //     echo json_encode($login);
 // });
 
+// ->middleware('auth')
 
+
+Route::get('/figurinha/create', [FigurinhaController::class, 'create'])->name('createFigurinha')->middleware('autenticacao');
+Route::post('/figurinha/store', [FigurinhaController::class, 'store'])->name('storeFigurinha')->middleware('autenticacao');
+
+
+
+Route::get('/pacote/create', [FigurinhaController::class, 'create'])->name('createPacoteFigurinha')->middleware('autenticacao');
 
 Route::get('/figurinha/create', [FigurinhaController::class, 'create'])->name('createFigurinha');
 Route::post('/figurinha/store', [FigurinhaController::class, 'store'])->name('storeFigurinha');
 
 
 
-Route::get('/pacote/create', [PacoteController::class, 'create'])->name('createPacoteFigurinha');
+
+
+Route::get('/listagem', [ ListagemController::class, 'listar'])->name('listagem');
+
