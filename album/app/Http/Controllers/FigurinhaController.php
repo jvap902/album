@@ -29,11 +29,17 @@ class FigurinhaController extends Controller
         try{
             $data = $request->all();
             unset($data['_token']);
-            if ($request->hasFile('file')) {
+
+                $figurinhas = DB::table('figurinhas')->get();
+                foreach ($figurinhas as $f){
+                    if($f->numero == $request->get('numero')){
+                        return view('figurinha.create', ['erro' => "Este número já existe!"]);
+                    }
+                }
                     $request->validate([
                         'image' => 'mimes:jpeg,bmp,png' 
                     ]);
-    
+                    dd($request->file);
                     $request->file->store('');
     
                     $figurinha = new Figurinha([
@@ -44,8 +50,9 @@ class FigurinhaController extends Controller
                         "file_path" => $request->file->hashName()
                     ]);
                     $figurinha->save();
-                }
-                return view('figurinha.create');
+                
+
+                return redirect('/');
         }catch(Exception $e){
             return view('figurinha.create', ['erro' => $e]);
         }

@@ -17,7 +17,7 @@ class UsuariosController extends Controller
             $dados = $request->only('email', 'password');
             $usuarios = DB::table('usuarios')->where('email', $dados['email'])->first();
             if($usuarios && $usuarios->senha == $request->get('password')){
-                $request->session()->put('usuario',  $dados['password']);
+                $request->session()->put('usuario',  $dados['email']);
                 return redirect('/');
             }else{
                 return view("login/login", ['erro' => 'dados incorretos!']);
@@ -27,9 +27,8 @@ class UsuariosController extends Controller
 
         return view("login.login");
     }
-    public function logout(Request $request)
-    {
-        Auth::logout();
-        return redirect()->route("home");
+    public function logout(Request $request){
+        $request->session()->forget('usuario');
+        return redirect()->route('index');
     }
 }

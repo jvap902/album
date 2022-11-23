@@ -11,14 +11,17 @@
 
 <body>
     <div class="container">
-        @if(isset($erro))
-        <a>{{$erro}}</a>
-        @endif
+           
         <form action="{{ route('storeFigurinha') }}" method="post" enctype="multipart/form-data">
 
             @csrf
 
             <div id="div_criarfig">
+            @if(isset($erro))
+            <div class="alert alert-danger">
+                {{$erro}}
+            </div>
+            @endif
 
             <div class="form-floating mb-3 my-5">
                 <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome" value="" required>
@@ -41,7 +44,7 @@
             </div>
 
             <div>
-                <input class="form-control form-control-lg my-5" id="formFileLg" type="file">
+                <input class="form-control form-control-lg my-5" id="formFileLg" type="file" >
               </div>
 
             <div class="d-grid gap-2 col-8 mx-auto">
