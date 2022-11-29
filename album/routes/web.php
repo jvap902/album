@@ -32,7 +32,10 @@ Route::post('/login', [UsuariosController::class, 'login'])->name('logar');
 
 
 Route::get('/figurinha/create', [FigurinhaController::class, 'create'])->name('createFigurinha')->middleware('autenticacao');
-Route::post('/figurinha/store', [FigurinhaController::class, 'store'])->name('storeFigurinha')->middleware('autenticacao');
+Route::get('/figurinha/store', [FigurinhaController::class, 'store'])->name('storeFigurinha')->middleware('autenticacao');
+Route::get('/figurinha/destroy/{id}', [FigurinhaController::class, 'destroy'])->where('id', '[0-9]+')->name("destroyFigurinha")->middleware('autenticacao');
+Route::get('/figurinha/edit/{id}', [FigurinhaController::class, 'edit'])->where('id', '[0-9]+')->name("editFigurinha")->middleware('autenticacao');
+Route::post('/figurinha/update/{id}', [FigurinhaController::class, 'update'])->name("updateFigurinha")->middleware('autenticacao');
 
 
 

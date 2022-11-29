@@ -1,7 +1,6 @@
 @extends('base.index')
 @section('container')
     <div class="div">
-
         <div>
             <div class="div_album">
                 <div class="row">
