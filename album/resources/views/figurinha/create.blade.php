@@ -44,7 +44,7 @@
             </div>
 
             <div>
-                <input class="form-control form-control-lg my-5" id="formFileLg" type="file" >
+                <input name="file" class="form-control form-control-lg my-5" id="formFileLg" type="file" >
               </div>
 
             <div class="d-grid gap-2 col-8 mx-auto">
