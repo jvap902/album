@@ -5,8 +5,8 @@ use App\Http\Controllers\FigurinhaController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Usuario;
 use App\Http\Controllers\UsuariosController;
+use App\Http\Controllers\PacoteController;
 use App\Http\Controllers\ListagemController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,7 +37,6 @@ Route::post('/figurinha/store', [FigurinhaController::class, 'store'])->name('st
 
 
 Route::get('/pacote/create', [FigurinhaController::class, 'create'])->name('createPacoteFigurinha')->middleware('autenticacao');
-
 
 
 Route::get('/listagem', [ ListagemController::class, 'listar'])->name('listagem');
