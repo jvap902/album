@@ -17,10 +17,6 @@
     text-align: center;
 }
 
-.figurinha {
-    background-color: white;
-}
-
 .div_album {
     background-color: #75594333;
     position: relative;
@@ -47,6 +43,7 @@
     margin-top: 1rem;
     border-color: #000000;
     border-width: 0.5rem;
+    background-color: #d6d6d6c0;
 }
 
 .figurinhas_sweep .repetidas{
