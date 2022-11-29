@@ -29,7 +29,7 @@ class FigurinhaController extends Controller
         try{
             $data = $request->all();
             unset($data['_token']);
-
+            if($request->file){
                 $figurinhas = DB::table('figurinhas')->get();
                 foreach ($figurinhas as $f){
                     if($f->numero == $request->get('numero')){
@@ -37,9 +37,8 @@ class FigurinhaController extends Controller
                     }
                 }
                     $request->validate([
-                        'image' => 'mimes:jpeg,bmp,png'
+                        'image' => 'mimes:jpeg,jpg,bmp,png'
                     ]);
-                    dd($request->file);
                     $request->file->store('');
 
                     $figurinha = new Figurinha([
@@ -50,6 +49,9 @@ class FigurinhaController extends Controller
                         "file_path" => $request->file->hashName()
                     ]);
                     $figurinha->save();
+            }else{
+                return view('figurinha.create', ['erro' => "Escolha uma imagem para a figurinha!"]);
+            }
 
 
                 return redirect('/');
