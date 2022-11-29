@@ -44,7 +44,7 @@
                             </a>
 
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Gerenciar figurinhas</a></li>
+                                <li><a class="dropdown-item" href="{{ route('listagem') }}">Gerenciar figurinhas</a></li>
                                 <li><a class="dropdown-item" href="#">Sair</a></li>
                             </ul>
                         </div>
@@ -55,7 +55,7 @@
                         <form action="{{ route('login') }}" method='POST'>
                             @csrf
 
-                            <a href="{{ route('createFigurinha') }}" class="btn">Ganhar Figurinha</a>
+                            <a href="{{ route('createPacoteFigurinha') }}" class="btn">Gerar Pacote</a>
                         </form>
                     </div>
                     <div class="figurinhas_sweep">

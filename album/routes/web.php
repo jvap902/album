@@ -36,7 +36,7 @@ Route::post('/figurinha/store', [FigurinhaController::class, 'store'])->name('st
 
 
 
-Route::get('/pacote/create', [FigurinhaController::class, 'create'])->name('createPacoteFigurinha')->middleware('autenticacao');
+Route::get('/pacote/create', [PacoteController::class, 'create'])->name('createPacoteFigurinha')->middleware('autenticacao');
 
 
 Route::get('/listagem', [ ListagemController::class, 'listar'])->name('listagem');
