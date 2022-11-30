@@ -37,10 +37,10 @@ class FigurinhaController extends Controller
                     }
                 }
                     $request->validate([
-                        'image' => 'mimes:jpeg,jpg,bmp,png' 
+                        'image' => 'mimes:jpeg,jpg,bmp,png'
                     ]);
                     $request->file->store('');
-    
+
                     $figurinha = new Figurinha([
                         "nome" => $request->get('nome'),
                         "dtnasc" => $request->get('dtnasc'),
@@ -52,7 +52,7 @@ class FigurinhaController extends Controller
             }else{
                 return view('figurinha.create', ['erro' => "Escolha uma imagem para a figurinha!"]);
             }
-               
+
 
                 return redirect('/');
         }catch(Exception $e){
@@ -75,13 +75,13 @@ class FigurinhaController extends Controller
 
         DB::table('figurinhas')->where('id', $id)->update($data);
 
-        return redirect('/figurinha');
+        return redirect('/listagem');
 
     }
 
     function destroy($id){
         DB::table('figurinhas')->where('id', $id)->delete();
 
-        return redirect ('/figurinhas');
+        return redirect ('/listagem');
     }
 }

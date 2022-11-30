@@ -13,11 +13,14 @@ class PacoteController extends Controller
 
         foreach($pacote as $p){
 
-            $data['usuario_id'] = $request->session()->get('usuarios');
-            $data['figurinhas_id'] = $pacote[0]->id;
+            $usuario = DB::table('usuarios')->select('id')->where('email', '=', $request->session()->get('usuario'))->get();
+            
+            $data['usuario_id'] = $usuario[0]->id;
+            $data['figurinhas_id'] = $p->id;
+            $data['colada'] = 0;
 
             DB::table('usuarios_figurinhas')->insert($data);
-            // tem q terminar
+            
         }
 
         return view('home', [
