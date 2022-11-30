@@ -4,16 +4,7 @@
     width: 10rem;
 }
 
-.nome{
-    font-weight: bold;
-    text-align: center;
-}
-
-.naturalidade {
-    text-align: center;
-}
-
-.dtnasc {
+.card-text {
     text-align: center;
 }
 

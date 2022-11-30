@@ -1,1 +1,0 @@
-// await axios.get('link do arquivo', setFigurinha()) -> para pegar do banco

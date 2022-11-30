@@ -1,2 +1,2 @@
 export * from './figurinha';
-export * from './figurinhas';
+export * from './fig_album';

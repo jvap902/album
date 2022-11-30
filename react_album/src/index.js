@@ -1,12 +1,14 @@
-import React, {useEffect, useState} from "react";
-import _ from "lodash";
+import React from "react";
 import ReactDOM from "react-dom/client";
-import { Figurinha } from "./components";
-import axios from 'axios';
+import { FigAlbum } from "./components";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Figurinha />
+    <div class="div">
+      <div>
+        <FigAlbum />
+      </div>
+    </div>
   </React.StrictMode>
 );
