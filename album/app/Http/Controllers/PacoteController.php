@@ -10,11 +10,10 @@ class PacoteController extends Controller
 {
     function create(Request $request){
         $pacote = Figurinha::all()->random(5);
+        $usuario = DB::table('usuarios')->select('id')->where('email', '=', $request->session()->get('usuario'))->get();
+        //PRECISA ALTERAR $fu = DB::table('figurinhas')->leftJoin('usuarios_figurinhas', 'figurinhas.id', '=', 'usuarios_figurinhas.figurinhas_id')->where('usuarios_figurinhas.usuario_id', $usuario)->get();
 
         foreach($pacote as $p){
-
-            $usuario = DB::table('usuarios')->select('id')->where('email', '=', $request->session()->get('usuario'))->get();
-            
             $data['usuario_id'] = $usuario[0]->id;
             $data['figurinhas_id'] = $p->id;
             $data['colada'] = 0;
@@ -22,9 +21,9 @@ class PacoteController extends Controller
             DB::table('usuarios_figurinhas')->insert($data);
             
         }
-
         return view('home', [
-            'pacote' => $pacote
+            'pacote' => $pacote,
+            // 'figurinhas' => $fu
         ]);
     }
 }
