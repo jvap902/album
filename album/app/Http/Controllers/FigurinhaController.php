@@ -75,7 +75,7 @@ class FigurinhaController extends Controller
 
         DB::table('figurinhas')->where('id', $id)->update($data);
 
-        return redirect('/figurinha');
+        return redirect('/listagem');
 
     }
 
