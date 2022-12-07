@@ -37,6 +37,8 @@ Route::get('/figurinha/destroy/{id}', [FigurinhaController::class, 'destroy'])->
 Route::get('/figurinha/edit/{id}', [FigurinhaController::class, 'edit'])->where('id', '[0-9]+')->name("editFigurinha")->middleware('autenticacao');
 Route::post('/figurinha/update/{id}', [FigurinhaController::class, 'update'])->name("updateFigurinha")->middleware('autenticacao');
 
+Route::get('/infoFigurinhas', [ AlbumController::class, 'infoFigurinhas'])->middleware('autenticacao');
+
 
 
 Route::get('/pacote/create', [PacoteController::class, 'create'])->name('createPacoteFigurinha')->middleware('autenticacao');
