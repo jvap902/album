@@ -1,13 +1,12 @@
-import React, {useMemo, useState} from 'react'
-import ReactDOM from 'react-dom'
+  import React, {useMemo, useState} from 'react'
+  import ReactDOM from 'react-dom'
 
-export const BarraProgresso = () => {
   const { ProgressIndicator, Fabric: FabricComponent, initializeIcons } = window.Fabric;
 
   // Initialize icons in case this example uses them
   initializeIcons();
 
-  const ProgressIndicatorBasicExample = () => {
+  export const ProgressIndicatorBasicExample = () => {
     
     
     const [qtde, setQtde] = useState(0)
@@ -20,7 +19,6 @@ export const BarraProgresso = () => {
 
     return (
       <>
-      <button type="button" onClick={() => setQtde(qtde+1)}>Add</button>
       <ProgressIndicator label="Example title" description="Example description" percentComplete={percentComplete} />
   <p>{Math.floor(percentComplete * 100)}%</p>
   </>
@@ -29,4 +27,3 @@ export const BarraProgresso = () => {
 
   const ProgressIndicatorBasicExampleWrapper = () => <FabricComponent><ProgressIndicatorBasicExample /></FabricComponent>;
   ReactDOM.render(<ProgressIndicatorBasicExampleWrapper />, document.getElementById('content'))
-}
