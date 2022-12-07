@@ -1,7 +1,23 @@
 @extends ('base.index')
 
+  <nav class="navbar bg-light" id="navbar">
+    <div class="container-fluid">
+      <span class="navbar-text">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Álbum</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Gerencimaneto de figurinhas</li>
+          </ol>
+      </span>
+    </div>
+  </nav>
 
 <div class="div_listagem">
+
+
+    <div class="d-grid gap-2 col-2 mx-auto">
+    <a href="{{route('createFigurinha')}}" id="btncriarfig" class="btn btn-outline-dark" style="background-color: #01497C; color:aliceblue">Criar nova figurinha</a>
+    </div>
+
 <table class="table table-striped my-5">
     <thead>
         <tr>

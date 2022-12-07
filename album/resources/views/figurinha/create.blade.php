@@ -11,7 +11,7 @@
 
 <body>
     <div class="container">
-           
+
         <form action="{{ route('storeFigurinha') }}" method="post" enctype="multipart/form-data">
 
             @csrf
@@ -49,7 +49,7 @@
 
             <div class="d-grid gap-2 col-8 mx-auto">
                 <button type="submit" id="criarfig" class="btn btn8 my-4" style="background-color: #01497C; color:aliceblue">Criar figurinha</button>
-                <a href="../listagem" id="criarfig" class="btn btn8 my-1" style="background-color: #01497C; color:aliceblue">Voltar</a>
+                <a href="../listagem" id="voltar" class="btn btn8 my-1" style="background-color: #01497C; color:aliceblue">Voltar</a>
             </div>
         </form>
     </div>

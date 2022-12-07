@@ -54,7 +54,7 @@ class FigurinhaController extends Controller
             }
 
 
-                return redirect('/');
+                return redirect('/listagem');
         }catch(Exception $e){
             return view('figurinha.create', ['erro' => $e]);
         }
@@ -63,6 +63,7 @@ class FigurinhaController extends Controller
     function edit($id){
         $figurinha = DB::table('figurinhas')->find($id);
         return view('figurinha.edit', ['figurinha' => $figurinha]);
+
     }
 
     function update(Request $request){
