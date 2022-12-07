@@ -38,7 +38,6 @@ Route::get('/figurinha/edit/{id}', [FigurinhaController::class, 'edit'])->where(
 Route::post('/figurinha/update/{id}', [FigurinhaController::class, 'update'])->name("updateFigurinha")->middleware('autenticacao');
 
 
-
 Route::get('/pacote/create', [PacoteController::class, 'create'])->name('createPacoteFigurinha')->middleware('autenticacao');
 
 
