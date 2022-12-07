@@ -54,7 +54,7 @@ class FigurinhaController extends Controller
             }
 
 
-                return redirect('/');
+                return redirect('/listagem');
         }catch(Exception $e){
             return view('figurinha.create', ['erro' => $e]);
         }
