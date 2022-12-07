@@ -71,3 +71,5 @@
             </div>
         </div>
     </div>
+    <script src="//unpkg.com/office-ui-fabric-react@7/dist/office-ui-fabric-react.js"></script>
+    <script src="//unpkg.com/@uifabric/react-hooks@7/dist/react-hooks.js"></script>
