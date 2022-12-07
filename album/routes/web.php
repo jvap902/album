@@ -18,7 +18,7 @@ use App\Http\Controllers\ListagemController;
 |
 */
 
-Route::get('/', [ AlbumController::class, 'home']);
+Route::get('/', [ AlbumController::class, 'home'])->middleware('autenticacao');
 
 Route::get('/login', [ UsuariosController::class, 'login'])->name('login');
 Route::post('/login', [UsuariosController::class, 'login'])->name('logar');
@@ -36,6 +36,8 @@ Route::post('/figurinha/store', [FigurinhaController::class, 'store'])->name('st
 Route::get('/figurinha/destroy/{id}', [FigurinhaController::class, 'destroy'])->where('id', '[0-9]+')->name("destroyFigurinha")->middleware('autenticacao');
 Route::get('/figurinha/edit/{id}', [FigurinhaController::class, 'edit'])->where('id', '[0-9]+')->name("editFigurinha")->middleware('autenticacao');
 Route::post('/figurinha/update/{id}', [FigurinhaController::class, 'update'])->name("updateFigurinha")->middleware('autenticacao');
+
+Route::get('/infoFigurinhas', [ AlbumController::class, 'infoFigurinhas'])->middleware('autenticacao');
 
 
 Route::get('/pacote/create', [PacoteController::class, 'create'])->name('createPacoteFigurinha')->middleware('autenticacao');

@@ -1,20 +1,21 @@
 // var f = await axios.get('link do arquivo', setFigurinha())
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import { api } from '../api'
 import { Figurinha } from "./figurinha";
 
 export const FigAlbum = () => {
   const figurinhas = [
-    { num: 1, nome: "AAAAA", naturalidade: "Bento Gonçalves", dtnasc: "11/11/2011", img: "15-4020", colada: 1 },
-    { num: 2, nome: "BBBBB", naturalidade: "Bento Gonçalves", dtnasc: "12/12/2012", img: "15-4020", colada: 0 },
+    { id:1, num: 1, nome: "AAAAA", naturalidade: "Bento Gonçalves", dtnasc: "11/11/2011", img: "15-4020", colada: 1 },
+    { id:2, num: 2, nome: "BBBBB", naturalidade: "Bento Gonçalves", dtnasc: "12/12/2012", img: "15-4020", colada: 0 },
   ];
 
   const [fig, setFig] = useState([]);
 
   useEffect(() => {
     const load = async () => {
-      const r = await axios.get("http://127.0.0.1:8000/");
+      const r = await api.get("/infoFigurinhas");
 
+      console.log(r.data)
       setFig(r.data);
     };
 
@@ -22,10 +23,10 @@ export const FigAlbum = () => {
   }, []);
 
   return (
-    <div class="div_album">
-      <div class="row">
+    <div className="div_album">
+      <div className="row">
         {figurinhas.map((figurinha) => (
-          <Figurinha key={figurinha.num} {...figurinha} />
+          <Figurinha key={figurinha.num} data={figurinha} />
         ))}
       </div>
     </div>

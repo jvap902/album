@@ -8,6 +8,14 @@
     text-align: center;
 }
 
+.fig_name {
+    font: bold;
+}
+
+.n_colada {
+    text-align: center;
+}
+
 .div_album {
     background-color: #75594333;
     position: relative;
