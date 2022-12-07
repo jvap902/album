@@ -44,7 +44,7 @@
 
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="{{ route('listagem') }}">Gerenciar figurinhas</a></li>
-                                <li><a class="dropdown-item" href="#">Sair</a></li>
+                                <li><a class="dropdown-item" href="{{ route('logout') }}">Sair</a></li>
                             </ul>
                         </div>
                     </nav>

@@ -12,6 +12,10 @@ root.render(
       <div>
         <FigAlbum />
       </div>
+      <div>
+        
+      </div>
+      
     </div>
   </React.StrictMode>
 );

@@ -22,6 +22,7 @@ Route::get('/', [ AlbumController::class, 'home'])->middleware('autenticacao');
 
 Route::get('/login', [ UsuariosController::class, 'login'])->name('login');
 Route::post('/login', [UsuariosController::class, 'login'])->name('logar');
+Route::get('/logout', [UsuariosController::class, 'logout'])->name('logout');
 
 // Route::get('/getlogin/', function(){
 //     $login = Usuario::all();
