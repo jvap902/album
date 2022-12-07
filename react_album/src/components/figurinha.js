@@ -1,28 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
 
-export const Figurinha = ({ img, nome, naturalidade, dtnasc, num, colada }) => {
-  if (colada) {
+export const Figurinha = ({ data }) => {
+  if (data.colada) {
     return (
-      <div class="col">
-        <div class="card">
-          <img class="card-img-top" src={img} alt="Card image cap" />
-          <div class="card-body">
-            <p class="card-text" style="font-weight: bold;">
-              {nome}
-            </p>
-            <p class="card-text">{naturalidade}</p>
-            <p class="card-text">{dtnasc}</p>
+      <div className="col">
+        <div className="card">
+          <img className="card-img-top fig_name" src={data.img} alt="Card cap" />
+          <div className="card-body">
+            <p className="card-text">{data.nome}</p>
+            <p className="card-text">{data.naturalidade}</p>
+            <p className="card-text">{data.dtnasc}</p>
           </div>
         </div>
       </div>
     );
   } else {
-    <div class="col">
-    <div class="card">
-        <div class="card-body">
-            <p>{num}</p>
+    return (
+      <div className="col">
+        <div className="card">
+          <div className="card-body n_colada">
+            <h2>{data.num}</h2>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
+    );
   }
 };
