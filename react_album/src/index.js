@@ -7,12 +7,12 @@ root.render(
   <React.StrictMode>
     <div className="div">
       <div className="barra_progresso">
-          
+
       </div>
       <div>
         <FigAlbum />
       </div>
-
+      
     </div>
   </React.StrictMode>
 );
