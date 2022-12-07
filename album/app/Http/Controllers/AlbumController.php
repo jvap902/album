@@ -11,7 +11,9 @@ class AlbumController extends Controller
     function home(Request $request){
         $uid = DB::table('usuarios')->where('email', $request->session()->get('usuario'))->value('id');
 
+        
         $fuColadas = DB::table('figurinhas')->leftJoin('usuarios_figurinhas', 'figurinhas.id', '=', 'usuarios_figurinhas.figurinhas_id')->orderby('numero', 'DESC')->where([['usuarios_figurinhas.usuario_id', $uid], ['usuarios_figurinhas.colada', 1]])->get();
+
 
         $figurinhas = DB::table('figurinhas')->orderby('numero', 'DESC')->get();
 
@@ -24,7 +26,7 @@ class AlbumController extends Controller
                 }
             }
             if(!$colada){
-                $fuNaoColadas[$n] = $f->id;
+                $fuNaoColadas[$n] = $f;
                 $n++;
             }
             $colada = false;
@@ -34,7 +36,7 @@ class AlbumController extends Controller
         }
 
        
-
+dd($figurinhas, $fuColadas, $fuNaoColadas);
         return view('home', ['figurinhas' => $fuColadas]);
     }
 }

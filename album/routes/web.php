@@ -18,7 +18,7 @@ use App\Http\Controllers\ListagemController;
 |
 */
 
-Route::get('/', [ AlbumController::class, 'home']);
+Route::get('/', [ AlbumController::class, 'home'])->middleware('autenticacao');
 
 Route::get('/login', [ UsuariosController::class, 'login'])->name('login');
 Route::post('/login', [UsuariosController::class, 'login'])->name('logar');
