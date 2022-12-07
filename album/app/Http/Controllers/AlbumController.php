@@ -36,7 +36,6 @@ class AlbumController extends Controller
         }
 
        
-dd($figurinhas, $fuColadas, $fuNaoColadas);
         return view('home', ['figurinhas' => $fuColadas]);
     }
 }
