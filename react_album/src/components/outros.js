@@ -10,8 +10,8 @@ export const Outros = () => {
       <Nav />
       <div className="pacotes_figurinhas">
         <CriarPacote />
-        <FigColar />
         <Repetidas />
+        <FigColar />
       </div>
     </>
   );

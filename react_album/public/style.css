@@ -4,6 +4,12 @@
     width: 10rem;
 }
 
+.btn_gerar_pacote{
+    border-radius: 7px;
+    padding: 0.5rem;
+    background-color: #63b9ff;
+}
+
 .card-text {
     text-align: center;
 }
