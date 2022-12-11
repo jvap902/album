@@ -5,7 +5,7 @@ import { Figurinha } from "./figurinha";
 
 export const FigAlbum = () => {
   const figurinhas = [
-    { id:1, num: 1, nome: "AAAAA", naturalidade: "Bento Gonçalves", dtnasc: "11/11/2011", img: "15-4020", colada: 1 },
+    { id:1, num: 1, nome: "AAAAA", naturalidade: "Bento Gonçalves", dtnasc: "11/11/2011", img: "a", colada: 1 },
     { id:2, num: 2, nome: "BBBBB", naturalidade: "Bento Gonçalves", dtnasc: "12/12/2012", img: "15-4020", colada: 0 },
   ];
 
