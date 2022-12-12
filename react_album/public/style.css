@@ -51,11 +51,24 @@
     background-color: #d6d6d6c0;
 }
 
-.figurinhas_sweep .repetidas{
+.repetidas{
     height: 15.7rem;
-    width: 10.5rem;
+    width: 12rem;
     position: relative;
     margin: auto;
+}
+
+.figurinhas_sweep{
+    margin-top: 2rem !important;
+    max-height: 37rem;
+    width: 12rem;
+    position: relative;
+    margin: auto;
+}
+
+.figurinhas_sweep {
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .outros {
