@@ -4,14 +4,14 @@ import { FigColar } from "./fig_colar";
 import { Nav } from "./nav";
 import { Repetidas } from "./repetidas";
 
-export const Outros = ({figurinhas, colaFigurinha}) => {
+export const Outros = () => {
   return (
     <>
       <Nav />
       <div className="pacotes_figurinhas">
         <CriarPacote />
         <Repetidas />
-        <FigColar figurinhas={figurinhas} colaFigurinha={colaFigurinha}  />
+        <FigColar />
       </div>
     </>
   );

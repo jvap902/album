@@ -1,10 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./app";
+import { FigAlbum, Outros, ProgressIndicatorBasicExample } from "./components";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App/>
+    <div className="div">
+      {/* <div className="barra_progresso">
+        <ProgressIndicatorBasicExample />
+      </div> */}
+      <div>
+        <FigAlbum />
+      </div>
+      <div className="outros">
+        <Outros />
+      </div>
+    </div>
   </React.StrictMode>
 );
