@@ -19,7 +19,7 @@ export const Figurinha = ({ data }) => {
       <div className="col">
         <div className="card">
           <div className="card-body n_colada">
-            <h2>{data.num}</h2>
+            <h2>{data.numero}</h2>
           </div>
         </div>
       </div>
