@@ -8,7 +8,7 @@ export const Nav = () => {
         <div className="btn-group dropstart">
           <a
             className="btn btn-outline-dark dropdown-toggle btnmostrar"
-            href="#" //catar bootstrap para react
+            href="#" //colocar bootstrap para react
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
