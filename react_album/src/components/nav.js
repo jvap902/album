@@ -31,12 +31,12 @@ export const Nav = () => {
 
           <ul className="dropdown-menu">
             <li>
-              <a className="dropdown-item" href="{{ route('listagem') }}">
+              <a className="dropdown-item" href="http://127.0.0.1:8000/listagem">
                 Gerenciar figurinhas
               </a>
             </li>
             <li>
-              <a className="dropdown-item" href="#">
+              <a className="dropdown-item" href="http://127.0.0.1:8000/logout">
                 Sair
               </a>
             </li>

@@ -1,28 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { api } from "./api";
 import { FigAlbum, Outros, ProgressIndicatorBasicExample } from "./components";
-import { Login } from "./components/login";
 
 export const App = () => {
-  if ( 1 === 3/* ALYSSA VAI COLOCAR CONDIÇÃO PRA VER SE NÃO TA LOGADO */) {
-    console.log("ienoreioregibroeorgbie");
-    return (
-        <React.StrictMode>
-        <Login />
-      </React.StrictMode>
-    )
+  const [logado, setLogado] = useState();
+
+  useEffect(() => {
+    
+    // const load = async () => { 
+
+    //   fetch('http://127.0.0.1:8000/logado')
+    //   .then(response => response.json())
+    //   .then(data => setlogado({ totalReactPackages: data.total }));
+
+    //   console.log(logado);
+    // };
+    // load()
+    
+  }, []);
+
+
+  if (logado === 0) {
+    // window.location.replace('http://127.0.0.1:8000/login');
   } else {
     return (
       <React.StrictMode>
-        <div className="div">
-          {/* <div className="barra_progresso">
-        <ProgressIndicatorBasicExample />
-      </div> */}
+        <div style={{display: "flex", flexDirection:"column"}}>
+        <div >
           <div>
             <FigAlbum />
           </div>
           <div className="outros">
             <Outros />
           </div>
+        </div>
         </div>
       </React.StrictMode>
     );
