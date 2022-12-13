@@ -36,7 +36,7 @@ Route::post('/figurinha/update/{id}', [FigurinhaController::class, 'update'])->n
 Route::get('/infoFigurinhas', [ AlbumController::class, 'infoFigurinhas'])/* ->middleware('autenticacao') */;
 
 
-Route::get('/pacote/create', [PacoteController::class, 'create'])->name('createPacoteFigurinha')->middleware('autenticacao');
+Route::get('/pacote/create', [PacoteController::class, 'create'])->name('createPacoteFigurinha');
 
 
 Route::get('/listagem', [ ListagemController::class, 'listar'])->name('listagem');
