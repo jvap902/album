@@ -25,7 +25,7 @@
 
             <div class="form-floating mb-3 my-5">
                 <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome" value="" required>
-                <label for="floatingInput">Nome do jogador</label>
+                <label for="floatingInput">Nome</label>
             </div>
 
             <div class="form-floating mb-3 my-5">

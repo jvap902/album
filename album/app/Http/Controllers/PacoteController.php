@@ -22,7 +22,7 @@ class PacoteController extends Controller
         }
 
         $fu = DB::table('figurinhas')->leftJoin('usuarios_figurinhas', 'figurinhas.id', '=', 'usuarios_figurinhas.figurinhas_id')->where('usuarios_figurinhas.usuario_id', $data['usuario_id'])->get();
-        // dd($fu);
+
         return [$pacote, $fu];
     }
 }

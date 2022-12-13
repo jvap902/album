@@ -18,19 +18,13 @@ use App\Http\Controllers\ListagemController;
 |
 */
 
-Route::get('/', [ AlbumController::class, 'home'])->middleware('autenticacao');
+// Route::get('/', [ AlbumController::class, 'home'])->middleware('autenticacao');
 
 Route::get('/login', [ UsuariosController::class, 'login'])->name('login');
 Route::post('/login', [UsuariosController::class, 'login'])->name('logar');
 Route::get('/logout', [UsuariosController::class, 'logout'])->name('logout');
 Route::get('/logado', [UsuariosController::class, 'logado']);
 
-// Route::get('/getlogin/', function(){
-//     $login = Usuario::all();
-//     echo json_encode($login);
-// });
-
-// ->middleware('auth')
 
 
 Route::get('/figurinha/create', [FigurinhaController::class, 'create'])->name('createFigurinha')->middleware('autenticacao');
