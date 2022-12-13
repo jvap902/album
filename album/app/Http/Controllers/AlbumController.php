@@ -14,10 +14,7 @@ class AlbumController extends Controller {
 
 
         $fuColadas = DB::table('figurinhas')->leftJoin('usuarios_figurinhas', 'figurinhas.id', '=', 'usuarios_figurinhas.figurinhas_id')->orderby('numero', 'DESC')->where([['usuarios_figurinhas.usuario_id', $uid], ['usuarios_figurinhas.colada', 1]])->get();
-
-
         $figurinhas = DB::table('figurinhas')->orderby('numero', 'DESC')->get();
-
         $fuNaoColadas = [];
         $colada = false;
         $n = 0;
