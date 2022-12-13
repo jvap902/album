@@ -39,7 +39,7 @@ class FigurinhaController extends Controller
                     $request->validate([
                         'image' => 'mimes:jpeg,jpg,bmp,png'
                     ]);
-                    $request->file->store('');
+                    $request->file->store('public');
 
                     $figurinha = new Figurinha([
                         "nome" => $request->get('nome'),
