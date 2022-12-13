@@ -1,5 +1,6 @@
-  import React, {useMemo, useState} from 'react'
+  import React, {useEffect, useMemo, useState} from 'react'
   import ReactDOM from 'react-dom'
+  import {FigAlbum} from "./fig_album"
 
   const { ProgressIndicator, Fabric: FabricComponent, initializeIcons } = window.Fabric;
 
@@ -11,11 +12,11 @@
     
     const [qtde, setQtde] = useState(0)
     
+    useEffect( () => {
+      setQtde(qtde+1)
+    }, [FigAlbum])
     
     const percentComplete = useMemo( () =>  qtde / 25, [qtde])
-    
-    
-    
 
     return (
       <>
