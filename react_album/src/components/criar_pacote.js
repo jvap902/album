@@ -13,9 +13,7 @@ export const CriarPacote = () => {
 
   return (
     <div name="figurinhas" className="pacote">
-      {/* <form action={route_form} method="POST"> */}
         <button onClick={abrir} className="btn_gerar_pacote">Gerar Pacote</button>
-      {/* </form> */}
     </div>
   );
 };
