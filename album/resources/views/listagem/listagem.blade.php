@@ -4,8 +4,8 @@
     <div class="container-fluid">
       <span class="navbar-text">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/">Álbum</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Gerencimaneto de figurinhas</li>
+            <li class="breadcrumb-item"><a href="http://localhost:3000/">Álbum</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Gerenciamento de figurinhas</li>
           </ol>
       </span>
     </div>

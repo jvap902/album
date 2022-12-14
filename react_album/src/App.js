@@ -1,41 +1,41 @@
 import React, { useEffect, useState } from "react";
 import { api } from "./api";
 import { FigAlbum, Outros, ProgressIndicatorBasicExample } from "./components";
+import { DndProvider } from "react-dnd"
+import { HTML5Backend } from 'react-dnd-html5-backend'
 
 export const App = () => {
-  const [logado, setLogado] = useState();
+  const [figurinhas, setFigurinhas] = useState([]);
+  const [figAl, setFigAl] = useState([]);
 
   useEffect(() => {
-    
-    // const load = async () => { 
+      const load = async () => {
+          const usuario = await api.get("/infoLogin");
+          const r = await api.post("/infoFigurinhas", {id:1});
+          setFigAl(r.data[0]);
+          setFigurinhas(r.data[1]);
+      };
 
-    //   fetch('http://127.0.0.1:8000/logado')
-    //   .then(response => response.json())
-    //   .then(data => setlogado({ totalReactPackages: data.total }));
-
-    //   console.log(logado);
-    // };
-    // load()
-    
+      load();
   }, []);
 
+  const colaFigurinha = async (id) => {
+      setFigurinhas((p) => p.filter((f) => f.id !== id));
+      await api.post("/colaFigurinhas", { id: id });
+  }
 
-  if (logado === 0) {
-    // window.location.replace('http://127.0.0.1:8000/login');
-  } else {
     return (
-      <React.StrictMode>
+      <DndProvider backend={HTML5Backend}>
         <div style={{display: "flex", flexDirection:"column"}}>
         <div >
           <div>
-            <FigAlbum />
+            <FigAlbum figAl={figAl} setFigAl={setFigAl} colaFigurinha={colaFigurinha}/>
           </div>
           <div className="outros">
-            <Outros />
+            <Outros figurinhas={figurinhas}/>
           </div>
         </div>
         </div>
-      </React.StrictMode>
+      </DndProvider>
     );
-  }
 };

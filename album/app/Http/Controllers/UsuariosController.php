@@ -39,4 +39,5 @@ class UsuariosController extends Controller
         }
         return $logado;
     }
+
 }

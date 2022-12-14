@@ -25,12 +25,12 @@
 
             <div class="form-floating mb-3 my-5">
                 <input type="hidden" name="id" class="form-control" id="id" placeholder="id" value={{"$figurinha->id"}} required>
-                <label for="floatingInput">Nome do jogador</label>
+                <label for="floatingInput">Nome</label>
             </div>
 
             <div class="form-floating mb-3 my-5">
                 <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome" value={{"$figurinha->nome"}} required>
-                <label for="floatingInput">Nome do jogador</label>
+                <label for="floatingInput">Nome</label>
             </div>
 
             <div class="form-floating mb-3 my-5">

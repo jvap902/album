@@ -18,19 +18,14 @@ use App\Http\Controllers\ListagemController;
 |
 */
 
-Route::get('/', [ AlbumController::class, 'home'])->middleware('autenticacao');
+// Route::get('/', [ AlbumController::class, 'home'])->middleware('autenticacao');
 
 Route::get('/login', [ UsuariosController::class, 'login'])->name('login');
 Route::post('/login', [UsuariosController::class, 'login'])->name('logar');
 Route::get('/logout', [UsuariosController::class, 'logout'])->name('logout');
 Route::get('/logado', [UsuariosController::class, 'logado']);
+Route::get('/infoLogin', [ AlbumController::class, 'infoLogin'])/* ->middleware('autenticacao')  Login do Frontend*/; 
 
-// Route::get('/getlogin/', function(){
-//     $login = Usuario::all();
-//     echo json_encode($login);
-// });
-
-// ->middleware('auth')
 
 
 Route::get('/figurinha/create', [FigurinhaController::class, 'create'])->name('createFigurinha')->middleware('autenticacao');
@@ -39,10 +34,10 @@ Route::get('/figurinha/destroy/{id}', [FigurinhaController::class, 'destroy'])->
 Route::get('/figurinha/edit/{id}', [FigurinhaController::class, 'edit'])->where('id', '[0-9]+')->name("editFigurinha")->middleware('autenticacao');
 Route::post('/figurinha/update/{id}', [FigurinhaController::class, 'update'])->name("updateFigurinha")->middleware('autenticacao');
 
-Route::get('/infoFigurinhas', [ AlbumController::class, 'infoFigurinhas'])/* ->middleware('autenticacao') */;
+Route::post('/infoFigurinhas', [ AlbumController::class, 'infoFigurinhas'])/* ->middleware('autenticacao') */;
+Route::post('/colaFigurinhas', [ AlbumController::class, 'colaFigurinhas'])/* ->middleware('autenticacao') */;
 
-
-Route::get('/pacote/create', [PacoteController::class, 'create'])->name('createPacoteFigurinha')->middleware('autenticacao');
+Route::get('/pacote/create', [PacoteController::class, 'create'])->name('createPacoteFigurinha');
 
 
 Route::get('/listagem', [ ListagemController::class, 'listar'])->name('listagem');
