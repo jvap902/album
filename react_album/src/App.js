@@ -23,7 +23,11 @@ export const App = () => {
                 coladas += 1;
             }
           })
-          setPct(Math.round(coladas/r.data[0].length *100))
+          $progresso = Math.round(coladas/r.data[0].length *100);
+          setPct($progresso);
+          if ($progresso == 100){
+            window.alert('Parabéns! Você completou o álbum!')
+          }
       };
 
       load();
