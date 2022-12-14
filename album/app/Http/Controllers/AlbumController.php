@@ -13,9 +13,13 @@ class AlbumController extends Controller {
     function infoFigurinhas(Request $request) {
         $uid = $request->get('id');
 
-        $fuColadas = DB::table('figurinhas')->leftJoin('usuarios_figurinhas', 'figurinhas.id', '=', 'usuarios_figurinhas.figurinhas_id')->orderby('numero', 'DESC')->where([['usuarios_figurinhas.colada', 1], ['usuarios_figurinhas.usuario_id', $uid]])->get();
-        $figurinhas = DB::table('figurinhas')->join('usuarios_figurinhas', 'figurinhas.id', '=', 'usuarios_figurinhas.figurinhas_id')->orderby('numero', 'DESC')->where('usuarios_figurinhas.usuario_id', $uid)->get();
-        $fuNaoColadas = [];
+        $fuColadas = DB::select( DB::raw("select * from figurinhas inner join usuarios_figurinhas on usuarios_figurinhas.figurinhas_id = figurinhas.id where colada = 1 and usuario_id = :somevariable"), array(
+            'somevariable' => $uid,
+        ));
+         
+        $figurinhas = DB::table('figurinhas')->orderby('numero', 'DESC')->get();
+
+        $fuNaoColadas = DB::table('usuarios_figurinhas')->leftJoin('figurinhas', 'figurinhas.id', '=', 'usuarios_figurinhas.figurinhas_id')->where('usuarios_figurinhas.colada', 0)->orderby('numero', 'DESC')->get();
 
         $colada = false;
         $n = 0;
@@ -29,7 +33,6 @@ class AlbumController extends Controller {
                 }
             }
             if (!$colada) {
-                $fuNaoColadas[$n] = $f;
                 $n++;
                 $arrayFiguras[] = $f;
             }
@@ -50,8 +53,7 @@ class AlbumController extends Controller {
         $figurinha->colada = 1;
         $figurinha->save();
     }
-    public function infoLogin(Request $request)
-    {   
+    public function infoLogin(Request $request) {
         $usuario = $request->session()->get('usuario');
         return ($usuario);
     }
