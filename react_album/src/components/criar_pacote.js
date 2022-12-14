@@ -8,7 +8,7 @@ export const CriarPacote = () => {
   
   const abrir = async () => {
     const pacote = await axios.get("http://127.0.0.1:8000/pacote/create");
-    console.log(pacote)
+    window.location.reload();
   };
 
   return (

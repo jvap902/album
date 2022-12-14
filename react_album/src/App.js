@@ -32,6 +32,7 @@ export const App = () => {
   const colaFigurinha = async (id) => {
       setFigurinhas((p) => p.filter((f) => f.id !== id));
       await api.post("/colaFigurinhas", { id: id });
+      window.location.reload();
   }
 
     return (
