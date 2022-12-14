@@ -25,7 +25,7 @@ export const Figurinha = ({ data, colaFigurinha, setFigAl }) => {
     return (
       <div className="col"  ref={dropRef}>
         <div className="card">
-          <img className="card-img-top fig_name" src={'http://localhost:8000/imagens/'+ data.file_path} alt="Card cap" />
+          <img className="card-img-top fig_name" width="150" src={'http://localhost:8000/imagens/'+ data.file_path} alt="Card cap" />
           <div className="card-body">
             <p className="card-text">{data.nome}</p>
             <p className="card-text">{data.naturalidade}</p>
