@@ -24,6 +24,7 @@ Route::get('/login', [ UsuariosController::class, 'login'])->name('login');
 Route::post('/login', [UsuariosController::class, 'login'])->name('logar');
 Route::get('/logout', [UsuariosController::class, 'logout'])->name('logout');
 Route::get('/logado', [UsuariosController::class, 'logado']);
+Route::get('/infoLogin', [ AlbumController::class, 'infoLogin'])/* ->middleware('autenticacao')  Login do Frontend*/; 
 
 
 
@@ -33,8 +34,8 @@ Route::get('/figurinha/destroy/{id}', [FigurinhaController::class, 'destroy'])->
 Route::get('/figurinha/edit/{id}', [FigurinhaController::class, 'edit'])->where('id', '[0-9]+')->name("editFigurinha")->middleware('autenticacao');
 Route::post('/figurinha/update/{id}', [FigurinhaController::class, 'update'])->name("updateFigurinha")->middleware('autenticacao');
 
-Route::get('/infoFigurinhas', [ AlbumController::class, 'infoFigurinhas'])/* ->middleware('autenticacao') */;
-
+Route::post('/infoFigurinhas', [ AlbumController::class, 'infoFigurinhas'])/* ->middleware('autenticacao') */;
+Route::post('/colaFigurinhas', [ AlbumController::class, 'colaFigurinhas'])/* ->middleware('autenticacao') */;
 
 Route::get('/pacote/create', [PacoteController::class, 'create'])->name('createPacoteFigurinha');
 

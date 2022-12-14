@@ -10,7 +10,8 @@ export const App = () => {
 
   useEffect(() => {
       const load = async () => {
-          const r = await api.get("/infoFigurinhas");
+          const usuario = await api.get("/infoLogin");
+          const r = await api.post("/infoFigurinhas", {id:1});
           setFigAl(r.data[0]);
           setFigurinhas(r.data[1]);
       };

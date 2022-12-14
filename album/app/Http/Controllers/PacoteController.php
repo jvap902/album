@@ -13,7 +13,7 @@ class PacoteController extends Controller
         $usuario = DB::table('usuarios')->select('id')->where('email', '=', $request->session()->get('usuario'))->get();
         
         foreach($pacote as $p){
-            $data['usuario_id'] = $usuario[0]->id;
+            $data['usuario_id'] = 1;
             $data['figurinhas_id'] = $p->id;
             $data['colada'] = 0;
 
@@ -22,9 +22,9 @@ class PacoteController extends Controller
         }
 
         $fu = DB::table('figurinhas')->leftJoin('usuarios_figurinhas', 'figurinhas.id', '=', 'usuarios_figurinhas.figurinhas_id')->where('usuarios_figurinhas.usuario_id', $data['usuario_id'])->get();
-        return view('home', [
+        return [
             'pacote' => $pacote,
             'figurinhas' => $fu
-        ]);
+        ];
     }
 }
