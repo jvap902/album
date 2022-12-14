@@ -12,10 +12,16 @@
 
 .card-text {
     text-align: center;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .fig_name {
     font: bold;
+    height:100px;
+    object-fit : contain;
 }
 
 .n_colada {
