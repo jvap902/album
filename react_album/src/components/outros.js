@@ -11,7 +11,6 @@ export const Outros = ({figurinhas, colaFigurinha}) => {
       <div className="pacotes_figurinhas">
         <CriarPacote />
         <FigColar figurinhas={figurinhas} colaFigurinha={colaFigurinha}  />
-        <Repetidas />
       </div>
     </>
   );
