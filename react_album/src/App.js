@@ -22,8 +22,12 @@ export const App = () => {
             if(fig?.colada === 1) {
                 coladas += 1;
             }
-          })
-          setPct(Math.round(coladas/r.data[0].length *100))
+          });
+          var progresso = Math.round(coladas/r.data[0].length *100);
+          setPct(progresso);
+          if (progresso == 100){
+            window.alert('Parabéns! Você completou o álbum!')
+          }
       };
 
       load();
